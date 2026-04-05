@@ -1,6 +1,6 @@
 import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
-import { config } from '../config';
+import jwt, { Secret, SignOptions } from 'jsonwebtoken';
+import { config } from '../config/index.js';
 
 export class SecurityService {
   public static async hashPassword(password: string): Promise<string> {
@@ -13,12 +13,14 @@ export class SecurityService {
   }
 
   public static generateToken(payload: any): string {
-    return jwt.sign(payload, config.JWT_SECRET, { expiresIn: config.JWT_EXPIRES_IN });
+    return jwt.sign(payload as object, config.JWT_SECRET as Secret, { 
+      expiresIn: config.JWT_EXPIRES_IN as any 
+    });
   }
 
   public static verifyToken(token: string): any {
     try {
-      return jwt.verify(token, config.JWT_SECRET);
+      return jwt.verify(token, config.JWT_SECRET as Secret);
     } catch (e) {
       return null;
     }
