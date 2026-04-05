@@ -1,6 +1,6 @@
-import { User } from "../../domain/entity/user.entity";
-import { IUserRepository } from "../../application/interface/user.repository.interface";
-import { UserModel } from "../model/user.model";
+import { User } from "../../domain/entity/user.entity.js";
+import { IUserRepository } from "../../application/interface/user.repository.interface.js";
+import { UserModel } from "../model/user.model.js";
 
 export class MongoUserRepository implements IUserRepository {
   public async save(user: User): Promise<User | null> {

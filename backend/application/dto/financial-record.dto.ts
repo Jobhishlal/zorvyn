@@ -1,4 +1,4 @@
-import { TransactionType } from "../../domain/entity/financial-record.entity";
+import { TransactionType } from "../../domain/entity/financial-record.entity.js";
 
 export interface CreateFinancialRecordDTO {
   amount: number;

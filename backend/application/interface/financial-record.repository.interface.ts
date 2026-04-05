@@ -1,4 +1,4 @@
-import { FinancialRecord } from "../../domain/entity/financial-record.entity";
+import { FinancialRecord } from "../../domain/entity/financial-record.entity.js";
 
 export interface IFinancialRecordRepository {
   save(record: FinancialRecord): Promise<FinancialRecord>;

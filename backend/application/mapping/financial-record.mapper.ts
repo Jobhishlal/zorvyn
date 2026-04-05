@@ -1,5 +1,5 @@
-import { FinancialRecord } from "../../domain/entity/financial-record.entity";
-import { FinancialRecordResponseDTO } from "../dto/financial-record.dto";
+import { FinancialRecord } from "../../domain/entity/financial-record.entity.js";
+import { FinancialRecordResponseDTO } from "../dto/financial-record.dto.js";
 
 export class FinancialRecordMapper {
   public static toResponseDTO(record: FinancialRecord): FinancialRecordResponseDTO {

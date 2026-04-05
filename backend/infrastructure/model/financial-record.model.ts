@@ -1,5 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
-import { TransactionType } from '../../domain/entity/financial-record.entity';
+import { TransactionType } from '../../domain/entity/financial-record.entity.js';
 
 export interface IFinancialRecordDocument extends Document {
   amount: number;

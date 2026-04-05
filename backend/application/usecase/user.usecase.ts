@@ -1,7 +1,7 @@
-import { User, UserRole } from "../../domain/entity/user.entity";
-import { CreateUserDTO, UserResponseDTO } from "../dto/user.dto";
-import { IUserRepository } from "../interface/user.repository.interface";
-import { UserMapper } from "../mapping/user.mapper";
+import { User, UserRole } from "../../domain/entity/user.entity.js";
+import { CreateUserDTO, UserResponseDTO } from "../dto/user.dto.js";
+import { IUserRepository } from "../interface/user.repository.interface.js";
+import { UserMapper } from "../mapping/user.mapper.js";
 
 export class CreateUserUseCase {
   constructor(private userRepository: IUserRepository) {}

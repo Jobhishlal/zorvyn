@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { UserController } from '../controller/user.controller';
-import { authenticate, authorize } from '../../infrastructure/security/middleware';
-import { UserRole } from '../../domain/entity/user.entity';
+import { UserController } from '../controller/user.controller.js';
+import { authenticate, authorize } from '../../infrastructure/security/middleware.js';
+import { UserRole } from '../../domain/entity/user.entity.js';
 
 const userRouter = Router();
 

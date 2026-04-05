@@ -1,7 +1,7 @@
-import { MongoUserRepository } from "../repository/user.repository.mongo";
-import { MongoFinancialRecordRepository } from "../repository/financial-record.repository.mongo";
-import { CreateUserUseCase, GetAllUsersUseCase, DeleteUserUseCase } from "../../application/usecase/user.usecase";
-import { CreateFinancialRecordUseCase, GetAllTransactionsUseCase, GetDashboardSummaryUseCase, UpdateFinancialRecordUseCase, DeleteFinancialRecordUseCase } from "../../application/usecase/financial-record.usecase";
+import { MongoUserRepository } from "../repository/user.repository.mongo.js";
+import { MongoFinancialRecordRepository } from "../repository/financial-record.repository.mongo.js";
+import { CreateUserUseCase, GetAllUsersUseCase, DeleteUserUseCase } from "../../application/usecase/user.usecase.js";
+import { CreateFinancialRecordUseCase, GetAllTransactionsUseCase, GetDashboardSummaryUseCase, UpdateFinancialRecordUseCase, DeleteFinancialRecordUseCase } from "../../application/usecase/financial-record.usecase.js";
 
 // Repositories
 const userRepository = new MongoUserRepository();
